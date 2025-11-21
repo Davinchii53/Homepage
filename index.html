@@ -20,9 +20,9 @@
                 <li><a href="#about">Tentang</a></li>
                 <li><a href="#features">Fitur</a></li>
                 <li><a href="#abk-types">Jenis ABK</a></li>
+                <li><a href="#journal">Jurnal</a></li>
                 <li><a href="#contact">Kontak</a></li>
             </ul>
-            <a href="#contact" class="signup-btn">Daftar</a>
         </nav>
     </header>
 
@@ -31,7 +31,7 @@
         <div class="hero-content">
             <h1>Kami Hadir untuk Orang Tua Anak Berkebutuhan Khusus</h1>
             <p>Dukungan profesional, edukasi, dan komunitas dalam satu platform</p>
-            <a href="#contact" class="cta-button">Mulai Sekarang</a>
+            <a href="#about" class="cta-button">Pelajari Lebih Lanjut</a>
             <div class="scroll-indicator">↓</div>
         </div>
     </section>
@@ -69,19 +69,140 @@
         </div>
     </section>
 
-    <!-- ABK Types Section - Updated with Bahasa Isyarat -->
+    <!-- ABK Types Section -->
     <section class="abk-types" id="abk-types">
         <h2>Jenis Kebutuhan Khusus yang Kami Dukung</h2>
-        <p>Kami menyediakan dukungan khusus untuk semua jenis anak berkebutuhan khusus</p>
+        <p>Pilih jenis kebutuhan khusus untuk melihat jurnal dan artikel terkait</p>
         <div class="abk-tags">
-            <div class="abk-tag">Autisme</div>
-            <div class="abk-tag">ADHD</div>
-            <div class="abk-tag">Disleksia</div>
-            <div class="abk-tag">Speech Delay</div>
-            <div class="abk-tag">Down Syndrome</div>
-            <div class="abk-tag">Tunagrahita</div>
-            <div class="abk-tag">Tuna Rungu</div>
-            <div class="abk-tag">Bahasa Isyarat</div>
+            <div class="abk-tag" onclick="showJournal('autisme')">Autisme</div>
+            <div class="abk-tag" onclick="showJournal('adhd')">ADHD</div>
+            <div class="abk-tag" onclick="showJournal('disleksia')">Disleksia</div>
+            <div class="abk-tag" onclick="showJournal('speech-delay')">Speech Delay</div>
+            <div class="abk-tag" onclick="showJournal('down-syndrome')">Down Syndrome</div>
+            <div class="abk-tag" onclick="showJournal('tunagrahita')">Tunagrahita</div>
+            <div class="abk-tag" onclick="showJournal('tuna-rungu')">Tuna Rungu</div>
+            <div class="abk-tag" onclick="showJournal('bahasa-isyarat')">Bahasa Isyarat</div>
+        </div>
+    </section>
+
+    <!-- Journal Section -->
+    <section class="journal-section" id="journal">
+        <h2>Jurnal & Artikel: <span id="journal-title">Semua Kategori</span></h2>
+        <p class="journal-subtitle">Kumpulan jurnal, penelitian, dan artikel edukatif tentang anak berkebutuhan khusus</p>
+
+        <div class="journal-grid" id="journal-grid">
+            <!-- Autisme -->
+            <article class="journal-card" data-category="autisme">
+                <div class="journal-tag">Autisme</div>
+                <h3>Memahami Spektrum Autisme pada Anak</h3>
+                <p class="journal-excerpt">Panduan lengkap untuk orang tua dalam memahami karakteristik, diagnosis, dan pendekatan terapeutik untuk anak dengan autisme.</p>
+                <div class="journal-meta">
+                    <span>📅 20 Nov 2025</span>
+                    <span>⏱️ 8 menit baca</span>
+                </div>
+                <a href="#" class="read-more">Baca Selengkapnya →</a>
+            </article>
+
+            <!-- ADHD -->
+            <article class="journal-card" data-category="adhd">
+                <div class="journal-tag">ADHD</div>
+                <h3>Strategi Efektif Mendampingi Anak dengan ADHD</h3>
+                <p class="journal-excerpt">Tips praktis dan strategi yang terbukti efektif untuk membantu anak ADHD fokus dan berkembang optimal di rumah dan sekolah.</p>
+                <div class="journal-meta">
+                    <span>📅 18 Nov 2025</span>
+                    <span>⏱️ 6 menit baca</span>
+                </div>
+                <a href="#" class="read-more">Baca Selengkapnya →</a>
+            </article>
+
+            <!-- Disleksia -->
+            <article class="journal-card" data-category="disleksia">
+                <div class="journal-tag">Disleksia</div>
+                <h3>Mengenali Tanda-tanda Disleksia Sejak Dini</h3>
+                <p class="journal-excerpt">Panduan untuk orang tua dalam mengenali gejala disleksia dan langkah-langkah intervensi dini yang dapat dilakukan.</p>
+                <div class="journal-meta">
+                    <span>📅 15 Nov 2025</span>
+                    <span>⏱️ 7 menit baca</span>
+                </div>
+                <a href="#" class="read-more">Baca Selengkapnya →</a>
+            </article>
+
+            <!-- Speech Delay -->
+            <article class="journal-card" data-category="speech-delay">
+                <div class="journal-tag">Speech Delay</div>
+                <h3>Stimulasi Bicara untuk Anak dengan Keterlambatan Bahasa</h3>
+                <p class="journal-excerpt">Aktivitas dan teknik stimulasi yang dapat dilakukan di rumah untuk mendukung perkembangan bahasa anak.</p>
+                <div class="journal-meta">
+                    <span>📅 12 Nov 2025</span>
+                    <span>⏱️ 5 menit baca</span>
+                </div>
+                <a href="#" class="read-more">Baca Selengkapnya →</a>
+            </article>
+
+            <!-- Down Syndrome -->
+            <article class="journal-card" data-category="down-syndrome">
+                <div class="journal-tag">Down Syndrome</div>
+                <h3>Mendukung Perkembangan Anak Down Syndrome</h3>
+                <p class="journal-excerpt">Panduan komprehensif tentang cara mendukung perkembangan fisik, kognitif, dan sosial anak dengan Down Syndrome.</p>
+                <div class="journal-meta">
+                    <span>📅 10 Nov 2025</span>
+                    <span>⏱️ 9 menit baca</span>
+                </div>
+                <a href="#" class="read-more">Baca Selengkapnya →</a>
+            </article>
+
+            <!-- Tunagrahita -->
+            <article class="journal-card" data-category="tunagrahita">
+                <div class="journal-tag">Tunagrahita</div>
+                <h3>Pendidikan Inklusif untuk Anak dengan Hambatan Intelektual</h3>
+                <p class="journal-excerpt">Strategi pembelajaran dan adaptasi kurikulum yang efektif untuk anak tunagrahita di lingkungan pendidikan inklusif.</p>
+                <div class="journal-meta">
+                    <span>📅 8 Nov 2025</span>
+                    <span>⏱️ 7 menit baca</span>
+                </div>
+                <a href="#" class="read-more">Baca Selengkapnya →</a>
+            </article>
+
+            <!-- Tuna Rungu -->
+            <article class="journal-card" data-category="tuna-rungu">
+                <div class="journal-tag">Tuna Rungu</div>
+                <h3>Komunikasi Efektif dengan Anak Tunarungu</h3>
+                <p class="journal-excerpt">Metode komunikasi dan teknologi bantu yang dapat membantu orang tua berkomunikasi lebih baik dengan anak tunarungu.</p>
+                <div class="journal-meta">
+                    <span>📅 5 Nov 2025</span>
+                    <span>⏱️ 6 menit baca</span>
+                </div>
+                <a href="#" class="read-more">Baca Selengkapnya →</a>
+            </article>
+
+            <!-- Bahasa Isyarat -->
+            <article class="journal-card" data-category="bahasa-isyarat">
+                <div class="journal-tag">Bahasa Isyarat</div>
+                <h3>Panduan Dasar Belajar Bahasa Isyarat Indonesia (BISINDO)</h3>
+                <p class="journal-excerpt">Tutorial lengkap untuk orang tua yang ingin mempelajari bahasa isyarat untuk berkomunikasi dengan anak atau keluarga.</p>
+                <div class="journal-meta">
+                    <span>📅 3 Nov 2025</span>
+                    <span>⏱️ 10 menit baca</span>
+                </div>
+                <a href="#" class="read-more">Baca Selengkapnya →</a>
+            </article>
+
+            <!-- General -->
+            <article class="journal-card" data-category="all">
+                <div class="journal-tag">Umum</div>
+                <h3>Kesehatan Mental Orang Tua ABK: Pentingnya Self-Care</h3>
+                <p class="journal-excerpt">Mengapa kesehatan mental orang tua sangat penting dan bagaimana cara menjaganya sambil merawat anak berkebutuhan khusus.</p>
+                <div class="journal-meta">
+                    <span>📅 1 Nov 2025</span>
+                    <span>⏱️ 8 menit baca</span>
+                </div>
+                <a href="#" class="read-more">Baca Selengkapnya →</a>
+            </article>
+        </div>
+
+        <div class="journal-cta">
+            <p>Ingin berkontribusi artikel atau jurnal?</p>
+            <a href="#contact" class="btn-secondary">Hubungi Kami</a>
         </div>
     </section>
 
@@ -141,12 +262,12 @@
         </div>
     </section>
 
-    <!-- Contact CTA Section -->
+    <!-- Contact Section -->
     <section class="contact-cta" id="contact">
-        <h2>Siap Memulai Perjalanan Anda?</h2>
-        <p>Bergabunglah dengan SAKTI hari ini dan dapatkan akses ke sumber belajar dan komunitas pendukung</p>
-        <a href="#" class="cta-button">Daftar Gratis Sekarang</a>
-        <p class="small-text">Tanpa biaya pendaftaran. Privasi terjamin.</p>
+        <h2>Hubungi Kami</h2>
+        <p>Punya pertanyaan atau ingin berkontribusi? Kami siap mendengarkan</p>
+        <a href="mailto:info@sakti.id" class="cta-button">Email Kami</a>
+        <p class="small-text">Kami akan merespons dalam 1-2 hari kerja</p>
     </section>
 
     <!-- Footer -->
@@ -167,6 +288,7 @@
                 <ul>
                     <li><a href="#about">Tentang Kami</a></li>
                     <li><a href="#features">Layanan</a></li>
+                    <li><a href="#journal">Jurnal</a></li>
                     <li><a href="#contact">Kontak</a></li>
                     <li><a href="#">Kebijakan Privasi</a></li>
                     <li><a href="#">Syarat & Ketentuan</a></li>
@@ -190,6 +312,43 @@
             link.addEventListener('click', () => {
                 document.getElementById('navLinks').classList.remove('active');
             });
+        });
+
+        // Journal Filter Function
+        function showJournal(category) {
+            const journalCards = document.querySelectorAll('.journal-card');
+            const journalTitle = document.getElementById('journal-title');
+
+            // Update title
+            const titles = {
+                'autisme': 'Autisme',
+                'adhd': 'ADHD',
+                'disleksia': 'Disleksia',
+                'speech-delay': 'Speech Delay',
+                'down-syndrome': 'Down Syndrome',
+                'tunagrahita': 'Tunagrahita',
+                'tuna-rungu': 'Tuna Rungu',
+                'bahasa-isyarat': 'Bahasa Isyarat'
+            };
+
+            journalTitle.textContent = titles[category] || 'Semua Kategori';
+
+            // Filter cards
+            journalCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category || card.dataset.category === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Scroll to journal section
+            document.getElementById('journal').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Show all journals by default
+        window.addEventListener('DOMContentLoaded', () => {
+            showJournal('all');
         });
     </script>
 </body>

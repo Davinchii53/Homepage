@@ -56,19 +56,6 @@ nav {
     color: #8B5CF6;
 }
 
-.signup-btn {
-    background: #8B5CF6;
-    color: white;
-    padding: 0.5rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.signup-btn:hover {
-    background: #7C3AED;
-}
-
 /* Mobile Menu Toggle */
 .menu-toggle {
     display: none;
@@ -267,11 +254,131 @@ section p {
     border-radius: 50px;
     font-weight: 600;
     font-size: 1.1rem;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
 .abk-tag:hover {
     transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+}
+
+/* Journal Section Styles */
+.journal-section {
+    background: #F9FAFB;
+}
+
+.journal-subtitle {
+    color: #64748B;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+#journal-title {
+    color: #8B5CF6;
+}
+
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.journal-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.journal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.journal-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #8B5CF6 0%, #F97316 100%);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+.journal-card h3 {
+    font-size: 1.3rem;
+    color: #1E293B;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.journal-excerpt {
+    color: #64748B;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.journal-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+    color: #94A3B8;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #E5E7EB;
+}
+
+.read-more {
+    color: #8B5CF6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #7C3AED;
+}
+
+.journal-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.journal-cta p {
+    font-size: 1.1rem;
+    color: #374151;
+    margin-bottom: 1rem;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: #8B5CF6;
+    border: 2px solid #8B5CF6;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #8B5CF6;
+    color: white;
 }
 
 /* Statistics Section */
@@ -308,7 +415,7 @@ section p {
 
 /* Why SAKTI Section */
 .why-sakti {
-    background: #F9FAFB;
+    background: white;
 }
 
 .why-grid {
@@ -322,7 +429,7 @@ section p {
     align-items: flex-start;
     gap: 1rem;
     padding: 1.5rem;
-    background: white;
+    background: #F9FAFB;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -482,5 +589,18 @@ footer {
 
     section h2 {
         font-size: 2rem;
+    }
+
+    .journal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .abk-tags {
+        gap: 0.8rem;
+    }
+
+    .abk-tag {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
     }
 }
